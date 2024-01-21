@@ -1,8 +1,8 @@
 import React from 'react';
 
-const LocationDetails = () => {
+const LocationDetails = ({ place }) => {
     return (
-        <h1>Location Details</h1>
+        <h1>{place.name}</h1>
     );
 }
 
