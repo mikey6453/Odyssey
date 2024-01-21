@@ -20,10 +20,12 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        getPlacesData(bounds.sw, bounds.ne)
-            .then((data) => {
-                setPlaces(data);
-            })
+        if (bounds) { // Check if bounds is not null
+            getPlacesData(bounds.sw, bounds.ne)
+                .then((data) => {
+                    setPlaces(data);
+                })
+        }
     }, [coordinates, bounds]);
 
     return (

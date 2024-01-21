@@ -35,8 +35,8 @@ const List = ({ places }) => {
                 {places?.map((place, i) => (
                     <Grid item key={i} xs={12}>
                         <LocationDetails place={place} />
-                    </Grid>
-                ))} // Only map over if you have the places
+                    </Grid>  // Only map over if you have the places
+                ))}
             </Grid>
         </div>
     );
