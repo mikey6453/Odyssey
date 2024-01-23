@@ -39,6 +39,16 @@ const LocationDetails = ({ place }) => {
                 {place?.cuisine?.map(({ name }) => (
                     <Chip key={name} size="small" label={name} className={classes.chip}/>
                 ))}
+                {place?.address && (
+                    <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.subtitle}>
+                        <LocationOnIcon /> {place.address}
+                    </Typography>
+                )}
+                {place?.phone && (
+                    <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.subtitle}>
+                        <PhoneIcon /> {place.phone}
+                    </Typography>
+                )}
             </CardContent>
         </Card>
     );
