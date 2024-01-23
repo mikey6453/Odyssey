@@ -5,7 +5,7 @@ import LocationDetails from '../LocationDetails/LocationDetails';
 
 import useStyles from './ListStyles';
 
-const List = ({ places }) => {
+const List = ({ places, childClicked }) => {
     const classes = useStyles();
     const [type, setType] = useState('resturants');
     const [rating, setRating] = useState('');
